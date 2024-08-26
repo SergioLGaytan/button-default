@@ -3,28 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <script type="module" src="../button-default.js"></script>
   <style>
     body {
-      background: #fafafa;
+      background: black;
     }
   </style>
 </head>
 <body>
-  <div id="demo"></div>
+  <button-default id="btn-1" custom-name="send-click" button-text="Send"></button-default>
+  <button-default id="btn-2" custom-name="save-click" button-text="Save"></button-default>
+  <button-default id="btn-3" custom-name="finish-click" button-text="Finish"></button-default>
 
-  <script type="module">
-    import { html, render } from 'lit';
-    import '../button-default.js';
 
-    const header = 'Hello owc World!';
-    render(
-      html`
-        <button-default .header=${header}>
-          some light-dom
-        </button-default>
-      `,
-      document.querySelector('#demo')
-    );
+  <script>
+    const btn1 = document.querySelector('#btn-1');
+    const btn2 = document.querySelector('#btn-2');
+    const btn3 = document.querySelector('#btn-3');
+
+
+    eventListeners();
+
+    function eventListeners() {
+      btn1.addEventListener('send-click', ({target}) => {
+        console.log(btn1.buttonText);
+      });
+      
+      btn2.addEventListener('save-click', ({target}) => {
+        console.log(btn2.buttonText);
+      });
+      
+      btn3.addEventListener('finish-click', ({target}) => {
+        console.log(btn3.buttonText);
+      })
+
+    }
   </script>
 </body>
 </html>
