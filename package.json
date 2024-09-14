@@ -1,9 +1,9 @@
 {
-  "name": "button-default",
+  "name": "@slg-components/button-default",
   "description": "Webcomponent button-default following open-wc recommendations",
   "license": "MIT",
   "author": "button-default",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "index.js",
   "module": "index.js",

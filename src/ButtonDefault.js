@@ -27,7 +27,7 @@ export class ButtonDefault extends LitElement {
 
   static properties = {
     customName: { type: String, attribute:'custom-name' },
-    buttonText: { type: String, attribute:'button-text'}
+    buttonText: { type: String, attribute:'button-text'},
   };
 
   constructor() {
